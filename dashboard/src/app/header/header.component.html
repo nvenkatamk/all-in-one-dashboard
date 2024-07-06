@@ -1,0 +1,16 @@
+<div class="header">
+    <div class="logo">
+        <img src="../../assets/images/logo.png" alt="Logo">
+    </div>
+    <div class="add-button">
+        <mat-form-field>
+            <mat-label>Project List</mat-label>
+            <mat-select [(ngModel)]="selectedProject">
+                @for (list of projectList; track list) {
+                <mat-option [value]="list.value">{{list.key}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        <button class="header-button" (click)="onButtonClick()">Add Project</button>
+    </div>
+</div>
